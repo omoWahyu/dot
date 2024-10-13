@@ -19,7 +19,9 @@
       environment.systemPackages = with pkgs;
         [
 	   fish
+	   fishPlugins.bass
 	   eza
+	   stats
 	   mkalias
 	   neovim
 	   tmux
@@ -37,10 +39,12 @@
 	];
 	casks = [
 	  "visual-studio-code"
+	  "zed"
 	  "alacritty"
 	  "hammerspoon"
 	  "telegram"
 	  "adobe-creative-cloud"
+	  "microsoft-edge"
 	  "firefox"
 	  "brave-browser"
 	  "figma"
@@ -103,8 +107,9 @@
 	  autohide = true;
 	  persistent-apps = [
 	    "/System/Applications/Launchpad.app"
-	    "${pkgs.alacritty}/Applications/Alacritty.app"
+	    "/Applications/Alacritty.app"
 	    "/Applications/Firefox.app"
+	    "/Applications/Microsoft Edge.app"
 	    "${pkgs.google-chrome}/Applications/Google Chrome.app"
 	    "/Applications/Notion.app"
 	    "${pkgs.postman}/Applications/Postman.app"
@@ -127,7 +132,7 @@
       nix.settings.experimental-features = "nix-command flakes";
 
       # Create /etc/zshrc that loads the nix-darwin environment.
-      # programs.zsh.enable = true;  # default shell on catalina
+      programs.zsh.enable = true;  # default shell on catalina
       programs.fish.enable = true;
       
       system = {
