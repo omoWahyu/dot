@@ -26,7 +26,6 @@
 	   neovim
 	   tmux
 	   postman
-	   google-chrome
 	   zoom-us
 	   discord
         ];
@@ -39,12 +38,13 @@
 	];
 	casks = [
 	  "visual-studio-code"
-	  "zed"
+	  "herd"
 	  "alacritty"
 	  "hammerspoon"
 	  "telegram"
 	  "adobe-creative-cloud"
 	  "microsoft-edge"
+	  "arc"
 	  "firefox"
 	  "brave-browser"
 	  "figma"
@@ -108,7 +108,7 @@
 	  persistent-apps = [
 	    "/System/Applications/Launchpad.app"
 	    "/Applications/Alacritty.app"
-	    "/Applications/Firefox.app"
+	    "/Applications/Arc.app"
 	    "/Applications/Microsoft Edge.app"
 	    "${pkgs.google-chrome}/Applications/Google Chrome.app"
 	    "/Applications/Notion.app"
